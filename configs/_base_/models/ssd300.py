@@ -49,7 +49,7 @@ model = dict(
         debug=False),
     test_cfg=dict(
         nms_pre=1000,
-        nms=dict(type='nms', iou_threshold=0.45),
+        nms=dict(type='soft_nms', iou_threshold=0.45, min_score=0.02),
         min_bbox_size=0,
         score_thr=0.02,
         max_per_img=200))

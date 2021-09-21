@@ -5,8 +5,8 @@ import os.path as osp
 import time
 import warnings
 
-import mmcv
 import torch
+import mmcv
 from mmcv import Config, DictAction
 from mmcv.cnn import fuse_conv_bn
 from mmcv.runner import (get_dist_info, init_dist, load_checkpoint,
