@@ -160,8 +160,7 @@ def train_detector(model,
             broadcast_buffers=False,
             find_unused_parameters=find_unused_parameters)
     else:
-        model = build_dp(model, device_ids=cfg.gpu_ids)
-        # model = build_dp(model, cfg.device, device_ids=cfg.gpu_ids)
+        model = build_dp(model, cfg.device, device_ids=cfg.gpu_ids)
 
     # build optimizer
     auto_scale_lr(cfg, distributed, logger)
